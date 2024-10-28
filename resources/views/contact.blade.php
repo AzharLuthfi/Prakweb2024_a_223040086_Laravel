@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Halaman About</title>
     <link rel="stylesheet" href="css/style.css">
+    <title>Halaman Contact</title>
 </head>
 <body>
     <a href="/">Home</a>
@@ -13,10 +13,14 @@
     <a href="/blog">Blog</a>
     <a href="/contact">Contact</a>
     <h1>Halaman Contact</h1>
-    <h3>Email: </h3>
-    <p>azhar.luthfiadi@gmail.com</p>
-    <h3>Instagram: </h3>
-    <p>@azhar_luth</p>
+    <ul>
+        <li display="none">
+            <a href="https://instagram.com/azhr_luth">Instagram</a>
+        </li>
+        <li display="none">
+            <a href="https://youtube.com/MuhamadAzharLuthfiadi">Youtube</a>
+        </li>
+    </ul>
     
     
 </body>
