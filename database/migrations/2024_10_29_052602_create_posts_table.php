@@ -16,7 +16,6 @@ return new class extends Migration {
             $table->String('author');
             $table->String('slug')->unique();
             $table->text('body');
-
             $table->timestamps();
         });
     }
