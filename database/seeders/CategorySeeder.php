@@ -10,18 +10,18 @@ class CategorySeeder extends Seeder
      */
     public function run(): void
     {
-        // Category::created([
-        //     'name' => 'Web Design',
-        //     'slug' => 'web-Desain'
-        // ]);
-        // Category::created([
-        //     'name' => 'Intelegensia Buatan',
-        //     'slug' => 'Intelegensia-Buatan'
-        // ]);
-        // Category::created([
-        //     'name' => 'UI UX',
-        //     'slug' => 'UI-UX'
-        // ]);
-        Category::factory(3)->create();
+        Category::created([
+            'name' => 'Web Design',
+            'slug' => 'web-Desain'
+        ]);
+        Category::created([
+            'name' => 'Intelegensia Buatan',
+            'slug' => 'Intelegensia-Buatan'
+        ]);
+        Category::created([
+            'name' => 'UI UX',
+            'slug' => 'UI-UX'
+        ]);
+        // Category::factory(3)->create();
     }
 }

@@ -22,7 +22,8 @@ Route::get('/posts', function () {
 
 Route::get('/posts/{post:slug}', function (Post $post) {
 
-    return view('post', ['title' => 'Single Post', 'post' => $post]);
+    $post = Post::with(['author', 'category'])->latest()->get();
+    return view('posts', ['title' => 'Blog page', 'posts' => $post]);
 
 });
 
