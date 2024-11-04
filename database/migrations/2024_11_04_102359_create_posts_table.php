@@ -14,6 +14,10 @@ return new class extends Migration {
             $table->id();
             $table->String('title');
             $table->String('author');
+            $table->foreignId('author_id')->constrained(
+                table: 'users',
+                indexName: 'posts_author_id'
+            );
             $table->String('slug')->unique();
             $table->text('body');
             $table->timestamps();
