@@ -17,6 +17,7 @@ return new class extends Migration {
             $table->String('slug')->unique();
             $table->text('body');
             $table->timestamps();
+            $table->softDeletes(); // Menambahkan kolom deleted_at
         });
     }
 
@@ -25,6 +26,10 @@ return new class extends Migration {
      */
     public function down(): void
     {
-        Schema::dropIfExists('posts');
+        Schema::table('posts', function (Blueprint $table) {
+            $table->dropSoftDeletes(); // Menghapus kolom deleted_at jika rollback
+        });
+
     }
 };
+
