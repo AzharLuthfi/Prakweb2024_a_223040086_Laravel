@@ -10,17 +10,24 @@ class CategorySeeder extends Seeder
      */
     public function run(): void
     {
-        Category::created([
-            'name' => 'Web Design',
-            'slug' => 'web-Desain'
+        Category::create([
+            'slug' => 'web-Desain',
+            'color' => 'green'
         ]);
-        Category::created([
+        Category::create([
             'name' => 'Intelegensia Buatan',
-            'slug' => 'Intelegensia-Buatan'
+            'slug' => 'Intelegensia-Buatan',
+            'color' => 'blue'
         ]);
         Category::created([
             'name' => 'UI UX',
-            'slug' => 'UI-UX'
+            'slug' => 'UI-UX',
+            'color' => 'red'
+        ]);
+        Category::create([
+            'name' => 'Sistem Perancangan',
+            'slug' => 'Sistem-Perancangan',
+            'color' => 'yellow'
         ]);
         // Category::factory(3)->create();
     }
