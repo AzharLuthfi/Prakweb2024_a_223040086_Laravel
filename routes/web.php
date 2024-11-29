@@ -4,6 +4,8 @@ use App\Models\User;
 use App\Models\Post;
 use App\Models\Category;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\RegisterController;
 
 
 
@@ -39,4 +41,7 @@ Route::get('/categories/{category:slug}', function (Category $category) {
 
     return view('posts', ['title' => ' Article in Category : ' . $category->name, 'posts' => $category->posts]);
 });
+
+Route::get('/login', [LoginController::class, 'index']);
+Route::get('/register', [RegisterController::class, 'index']);
 
